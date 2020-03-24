@@ -1,0 +1,19 @@
+[0207/070333.899:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0207/070333.903:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0207/070333.903:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0207/070333.903:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0207/070333.903:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0207/070333.903:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0207/070333.903:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0207/070333.903:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0207/070333.903:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0207/070333.903:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[0207/070333.907:ERROR:exception_snapshot_win.cc(98)] thread ID 13568 not found in process
+[0207/070333.947:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0207/070333.947:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[0207/070333.947:ERROR:exception_snapshot_win.cc(98)] thread ID 7788 not found in process
+[0207/070333.947:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[0207/070333.947:ERROR:exception_snapshot_win.cc(98)] thread ID 15544 not found in process
+[0207/070334.027:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0207/070334.027:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[0207/070334.027:ERROR:exception_snapshot_win.cc(98)] thread ID 13648 not found in process

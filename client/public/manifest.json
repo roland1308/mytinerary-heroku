@@ -1,0 +1,20 @@
+{
+  "icons": [
+    {
+      "src": "mytineraryico.jpg",
+      "sizes": "48x48",
+      "type": "image/jpg"
+    },
+    {
+      "src": "mytineraryico.jpg",
+      "sizes": "144x144",
+      "type": "image/jpg"
+    }
+  ],
+  "short_name": "MYtinerary",
+  "name": "MYtinerary: choose your next trip!",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

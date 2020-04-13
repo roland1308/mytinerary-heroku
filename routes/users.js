@@ -5,6 +5,9 @@ const userModel = require("../model/userModel");
 require("dotenv").config();
 const secretOrKey = process.env.secretOrKey;
 
+const sharp = require('sharp')
+const path = require('path')
+
 const fs = require("fs");
 const { promisify } = require("util");
 const unlinkAsync = promisify(fs.unlink);
@@ -54,7 +57,15 @@ router.get("/all", (req, res) => {
 });
 
 /*add a User if not existing already: CREATE*/
-router.post("/add", [upload.single("picture")], (req, res) => {
+router.post("/add", [upload.single("picture")], async (req, res) => {
+  const { filename: image } = req.file
+  await sharp(req.file.path)
+    .resize(500)
+    .jpeg({ quality: 50 })
+    .toFile(
+      path.resolve(req.file.destination, 'resized', image)
+    )
+  fs.unlinkSync(req.file.path)
   const { username, email, pw } = req.body;
   if (!username || !email || !pw) {
     return res.status(400).json({ msg: "Please fill all fields" });
@@ -64,7 +75,7 @@ router.post("/add", [upload.single("picture")], (req, res) => {
     const newUser = new userModel({
       username,
       email,
-      picture: "/uploads/" + req.file.filename,
+      picture: "/uploads/resized/" + req.file.filename,
       pw: hash,
       favorites: []
     });

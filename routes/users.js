@@ -19,9 +19,7 @@ app.use(express.json());
 const jwt = require("jsonwebtoken");
 const passport = require("passport");
 
-const sharp = require('sharp')
-const path = require('path')
-const fs = require('fs')const multer = require("multer");
+const multer = require("multer");
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, "./uploads/");
@@ -57,15 +55,7 @@ router.get("/all", (req, res) => {
 
 /*add a User if not existing already: CREATE*/
 router.post("/add", [upload.single("picture")], (req, res) => {
-  const { filename: image } = req.file
   const { username, email, pw } = req.body;
-  await sharp(req.file.path)
-    .resize(500)
-    .jpeg({ quality: 50 })
-    .toFile(
-      path.resolve(req.file.destination, 'resized', image)
-    )
-  fs.unlinkSync(req.file.path)
   if (!username || !email || !pw) {
     return res.status(400).json({ msg: "Please fill all fields" });
   }
@@ -74,7 +64,7 @@ router.post("/add", [upload.single("picture")], (req, res) => {
     const newUser = new userModel({
       username,
       email,
-      picture: "/uploads/resized/" + req.file.filename,
+      picture: "/uploads/" + req.file.filename,
       pw: hash,
       favorites: []
     });
